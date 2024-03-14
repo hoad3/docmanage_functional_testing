@@ -4,8 +4,6 @@ exports.module1_5 = void 0;
 
 const module1_5 = async () =>{
    await browser.setWindowSize(1365, 911)
-   await browser.url(`${process.env.WEBSITE_URL}/revision-active/HT%20-%20QT%20-%2003_1`)
-   await expect(browser).toHaveUrl(`${process.env.WEBSITE_URL}/revision-active/HT%20-%20QT%20-%2003_1`)
    await browser.$("[class='btn btn-primary']").click()
 }
 

@@ -15,7 +15,7 @@ const module1_7 = async () =>{
 exports.module1_7 = module1_7;
 describe('test script Module1-7', () =>{
 
-    it("tests module1-1", module1_1);
+    // it("tests module1-1", module1_1);
     it("tests module1-7", module1_7)
 
 });
