@@ -1,15 +1,18 @@
 require('dotenv').config()
+const module1_3 = require("./Module1-3").module1_3
+exports.module1_4 = void 0;
 
-describe('Pentest script Module1-4', () =>{
 
-    let LinkPage1 = `${process.env.WEBSITE_URL}/category-folder/1`;
-    let OptiomClick = '[data-id="HT - QT - 11"]'
-    it('Điều hướng đến "Quản lý phiên bản hiệu lực"', () =>{
+const module1_4 = async () =>{
+    await browser.setWindowSize(1365, 911)
+    await browser.url(`${process.env.WEBSITE_URL}/category-folder/1`)
+    await expect(browser).toHaveUrl(`${process.env.WEBSITE_URL}/category-folder/1`)
+    await browser.$("[class='btn btn-success']").click()
+}
+exports.module1_4 = module1_4;
+describe('test script Module1-4', () =>{
 
-        browser.url(LinkPage1);
+    //it("tests module1-3", module1_3);
+    it("tests module1-4", module1_4);
 
-        $(OptiomClick).waitForDisplayed(5000);
-        $(OptiomClick).selectByVisibleText('Tài liệu hiệu lực');
-        browser.pause(3000);
-    })
 });

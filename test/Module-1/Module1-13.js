@@ -1,14 +1,16 @@
 require('dotenv').config()
+const module1_1 = require('./Module1-1').login
+exports.module1_13 = void 0;
 
-describe('Pentest script Module1-13', () =>{
+const module1_13 = async () =>{
+    await browser.setWindowSize(1360, 911)
+    await browser.$('[id="basic-nav-dropdown"]').click();
 
-    let LinkPage1 = `${process.env.WEBSITE_URL}/`;
-    let OptiomClick = '#basic-nav-dropdown';
-    it('chuyển hướng đến trang hệ thống chỉ số khoa phòng', () =>{
+    await browser.$('[href="/department-index"]').click();
+}
 
-        browser.url(LinkPage1);
-// chọn phần tử trong dropdown list
-        $(OptiomClick).selectByVisibleText('Hệ thống chỉ số khoa/ phòng');
-        browser.pause(3000);
-    });
+exports.module1_13 = module1_13;
+describe('test script Module1-13', () =>{
+    it("tests module1-1", module1_1);
+    it("tests module1-3", module1_13);
 });

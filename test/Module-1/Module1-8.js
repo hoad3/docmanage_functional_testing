@@ -1,14 +1,18 @@
 require('dotenv').config()
+const module1_7 = require("./Module1-7").module1_7
+exports.moduule1_8 = void 0;
 
-describe('Pentest script Module1-8', () =>{
-    let LinkPage1 = `${process.env.WEBSITE_URL}/index-hospital`;
-    let OptiomClick = '[type="button"]';
-    it('Điều hướng đến Chỉ số bệnh viện từ Dashboard', () =>{
+const module1_8 = async () => {
+    await browser.setWindowSize(1360, 911)
+    await browser.$('.MuiButton-root').click();
+    await browser.pause(5000)
+    // await expect(browser).toHaveUrl(`${process.env.WEBSITE_URL}/hospital-index-revision-by-year`)
+}
 
-        browser.url(LinkPage1);
-//Nhấp vào ô "Tài liệu" của phiên bản hết hiệu lực
-        $(OptiomClick).waitForDisplayed(5000);
-        $(OptiomClick).selectByVisibleText('Xem chỉ số trong một năm')
-        browser.pause(3000);
-    })
+exports.moduule1_8 = module1_8;
+describe('test script Module1-8', () =>{
+
+    it('Test module1_8', module1_8)
+
+
 });

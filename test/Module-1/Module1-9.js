@@ -1,22 +1,18 @@
 require('dotenv').config()
+const module1_8 = require('./Module1-8').module1_8
+exports.module1_9 = void 0;
 
-describe('Pentest script Module1-9', () =>{
+const module1_9 = async () =>{
+    await browser.setWindowSize(1231, 894)
+    // await browser.url(`${process.env.WEBSITE_URL}/hospital-index-revision-by-year`)
+    // await expect(browser).toHaveUrl(`${process.env.WEBSITE_URL}/hospital-index-revision-by-year`)
+    await browser.$("//*[@id=\"root\"]/div[1]/div[1]/div[2]/div[1]/div[2]/button").click()
+    await browser.pause()
+}
 
-    let LinkPage1 = `${process.env.WEBSITE_URL}/index-hospital`;
-    let inputyear = '#search-bar';
-    let OptiomClick = '[type="button"]';
-    it('Trình duyệt được điều hướng đến trang Danh sách chỉ số bệnh viện của năm được chọn', () =>{
+exports.module1_9 = module1_9;
+describe('test script Module1-9', () =>{
+it('test script module1_8', module1_8);
+   it('tests script module1_9', module1_9)
 
-        browser.url(LinkPage1);
-//Nhấp vào ô "Tài liệu" của phiên bản hết hiệu lực
-        $(OptiomClick).waitForDisplayed(5000);
-        $(OptiomClick).selectByVisibleText('Xem chỉ số trong một năm');
-        browser.pause(3000);
-
-        // điền vào ô năm
-        $(inputyear).setValue('2023');
-
-        browser.pause(3000);
-
-    })
 });

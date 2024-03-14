@@ -1,16 +1,16 @@
 require('dotenv').config()
+const module1_11 = require('./Module1-11').module1_11
+exports.module1_12 = void 0;
+const module1_12 = async () =>{
+    await browser.setWindowSize(1360, 911)
 
-describe('Pentest script Module1-12', () =>{
+    await browser.$("[title='Thời gian']").click()
+    await browser.pause(3000)
+}
 
-    let LinkPage1 = `${process.env.WEBSITE_URL}/index-hospital`;
-    let OptiomClick = '#basic-nav-dropdown';
-    let Botton = '#19';
-    let BottonTime = '[data-colindex="4"]';
-    it('chuyển hướng đến trang Chỉ số Thời gian điều trị trung bình1 theo năm', () =>{
+exports.module1_12 = module1_12;
+describe('test script Module1-12', () =>{
 
-        browser.url(LinkPage1);
-// chọn phần tử trong dropdown list
-        $(Botton).selectByAttribute('data-colindex', '4');
-        browser.pause(3000);
-    });
+   it("test script module1_12",module1_12)
+
 });

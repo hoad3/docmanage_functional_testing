@@ -1,14 +1,21 @@
 require('dotenv').config()
+const module1_3 = require('./Module1-3').module1_3
+exports.module1_6 = void 0;
 
-describe('Pentest script Module1-6', () =>{
-    let LinkPage1 = `${process.env.WEBSITE_URL}/category-folder/1`;
-    let OptiomClick = '[data-id="HT - QT - 11"]'
-    it('Điều hướng đến "Quản lý phiên bản hết hiệu lực"', () =>{
+const module1_6 = async () =>{
+    await browser.setWindowSize(1365, 911)
+    await browser.url(`${process.env.WEBSITE_URL}/category-folder/1`)
+    await expect(browser).toHaveUrl(`${process.env.WEBSITE_URL}/category-folder/1`)
+    await browser.$("//*[@id=\"root\"]/div[1]/div[1]/div[2]/div[2]/div/div[2]/div[2]/div/div/div[1]/div[8]/button").click()
+}
 
-        browser.url(LinkPage1);
-//Nhấp vào ô "Tài liệu" của phiên bản hết hiệu lực
-        $(OptiomClick).waitForDisplayed(5000);
-        $(OptiomClick).selectByIndex(5)
-        browser.pause(3000);
-    })
+exports.module1_6 = module1_6;
+describe('test script Module1-6', () =>{
+
+it("test module1_6", module1_6);
+
+
+
+
+
 });

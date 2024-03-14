@@ -1,14 +1,16 @@
 require('dotenv').config()
+const module1_4 = require('./Module1-4').module1_4
+exports.module1_5 = void 0;
 
-describe('Pentest script Module1-5', () =>{
-   let LinkPage1 = `${process.env.WEBSITE_URL}/revision-active/HT%20-%20QT%20-%2011_1`
-   let OptiomClick = '[data-id="29"]'
-   it('Trình duyệt được điều hướng đến trang quản lý tài liệu cho phiên bản được chọn "', () =>{
+const module1_5 = async () =>{
+   await browser.setWindowSize(1365, 911)
+   await browser.url(`${process.env.WEBSITE_URL}/revision-active/HT%20-%20QT%20-%2003_1`)
+   await expect(browser).toHaveUrl(`${process.env.WEBSITE_URL}/revision-active/HT%20-%20QT%20-%2003_1`)
+   await browser.$("[class='btn btn-primary']").click()
+}
 
-      browser.url(LinkPage1);
-//Nhấp vào ô "Tài liệu" của phiên bản hiệu lực
-      $(OptiomClick).waitForDisplayed(5000);
-      $(OptiomClick).selectByVisibleText('Tài liệu');
-      browser.pause(3000);
-   })
+exports.module1_5 = module1_5;
+describe('test script Module1-5', () =>{
+
+   it("tests Module1-5", module1_5);
 });

@@ -21,8 +21,22 @@ exports.config = {
     // of the config file unless it's absolute.
     //
     specs: [
-        // './test/Module-1/Test_case_Login.js',
-        './test/Module-1/Module1-14.js',
+
+        './test/Module-1/Module1-1.js',
+        './test/Module-1/Module1-2.js',
+        './test/Module-1/Module1-3.js',
+        './test/Module-1/Module1-4.js',
+        // './test/Module-1/Module1-5.js',
+        // './test/Module-1/Module1-6.js',
+        // './test/Module-1/Module1-7.js',
+        // './test/Module-1/Module1-8.js',
+        // './test/Module-1/Module1-9.js',
+        // './test/Module-1/Module1-10.js',
+        // './test/Module-1/Module1-11.js',
+        // './test/Module-1/Module1-12.js',
+        // './test/Module-1/Module1-13.js',
+        // './test/Update/Module1-7.js'
+
     ],
 
     // Patterns to exclude.
@@ -53,8 +67,6 @@ exports.config = {
     //
     capabilities: [{
         browserName: 'chrome'
-    }, {
-        browserName: 'firefox'
     }],
 
     //

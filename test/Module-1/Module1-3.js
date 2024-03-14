@@ -1,21 +1,32 @@
 require('dotenv').config()
+const login = require("./Module1-1").login
+const module1_2 = require("./Module1-2").module1_2
+exports.module1_3 = void 0;
 
-describe('script module 1-3', () =>{
-    let Linkpage = `${process.env.WEBSITE_URL}/categories`
-    let Botton = '[class="btn btn-primary"]';
-    let QuanLyQuyTrinh = `${process.env.WEBSITE_URL}/category-folder/1`;
-    it('Điều hướng đến "Quản lý thư mục"', () =>{
 
-        //điều hướng đến trang quản lý thư mục
-        browser.url(Linkpage);
+
+
+
+
+
+const module1_3 = async() =>{
+
+    await browser.setWindowSize(1355, 858)
+    // await browser.$("aria/Quy trình").click()
+    await browser.$("//*[@data-testid=\"FolderIcon\"]").click()
+
+
+}
+
+exports.module1_3 = module1_3;
+describe("Module1-3", () => {
+
+    // it("tests Module1-1", login);
+    it("test Module1_2", module1_2);
+    it("test Module1_3", module1_3, () =>{
         browser.pause(5000);
     });
 
-    it('- Trình duyệt được điều hướng đến trang "Quản lý thưc mục" ',() => {
 
-       // Nhấp vào ô "Quy trình" của bất kỳ thư mục nào
-        $(Botton).click();
 
-        browser.pause(5000)
-    })
-})
+});
