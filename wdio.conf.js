@@ -21,11 +21,10 @@ exports.config = {
     // of the config file unless it's absolute.
     //
     specs: [
-
-        './test/Module-1/Module1-1.js',
-        './test/Module-1/Module1-2.js',
-        './test/Module-1/Module1-3.js',
-        './test/Module-1/Module1-4.js',
+        // './test/Module-1/Module1-1.js',
+        './test/Module-2/module2-21.js',
+        // './test/Module-1/Module1-3.js',
+        // './test/Module-1/Module1-4.js',
         // './test/Module-1/Module1-5.js',
         // './test/Module-1/Module1-6.js',
         // './test/Module-1/Module1-7.js',

@@ -4,8 +4,8 @@ exports.module1_6 = void 0;
 
 const module1_6 = async () =>{
     await browser.setWindowSize(1365, 911)
-    await browser.url(`${process.env.WEBSITE_URL}/category-folder/1`)
-    await expect(browser).toHaveUrl(`${process.env.WEBSITE_URL}/category-folder/1`)
+    await browser.url(`${process.env.LOGIN_URL}/category-folder/1`)
+    await expect(browser).toHaveUrl(`${process.env.LOGIN_URL}/category-folder/1`)
     await browser.$("//*[@id=\"root\"]/div[1]/div[1]/div[2]/div[2]/div/div[2]/div[2]/div/div/div[1]/div[8]/button").click()
 }
 

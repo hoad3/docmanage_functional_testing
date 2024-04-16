@@ -4,8 +4,8 @@ exports.module1_9 = void 0;
 
 const module1_9 = async () =>{
     await browser.setWindowSize(1231, 894)
-    // await browser.url(`${process.env.WEBSITE_URL}/hospital-index-revision-by-year`)
-    // await expect(browser).toHaveUrl(`${process.env.WEBSITE_URL}/hospital-index-revision-by-year`)
+    // await browser.url(`${process.env.LOGIN_URL}/hospital-index-revision-by-year`)
+    // await expect(browser).toHaveUrl(`${process.env.LOGIN_URL}/hospital-index-revision-by-year`)
     await browser.$('.MuiButtonBase-root').click()
     await browser.pause()
 }

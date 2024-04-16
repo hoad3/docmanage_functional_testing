@@ -6,7 +6,7 @@ const module1_8 = async () => {
     await browser.setWindowSize(1360, 911)
     await browser.$('.MuiButton-root').click();
     await browser.pause(5000)
-    // await expect(browser).toHaveUrl(`${process.env.WEBSITE_URL}/hospital-index-revision-by-year`)
+    // await expect(browser).toHaveUrl(`${process.env.LOGIN_URL}/hospital-index-revision-by-year`)
 }
 
 exports.moduule1_8 = module1_8;
