@@ -2,7 +2,7 @@ require('dotenv').config()
 
 exports.login = void 0;
 const login = async () => {
-    const LinkPage1 = `${process.env.WEBSITE_URL}/login`;
+    const LinkPage1 = `${process.env.LOGIN_URL}/login`;
     await browser.setWindowSize(1365, 911)
     await browser.url(LinkPage1)
     await expect(browser).toHaveUrl(LinkPage1)

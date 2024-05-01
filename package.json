@@ -16,8 +16,10 @@
   "license": "ISC",
   "dependencies": {
     "@wdio/cli": "^8.32.4",
+    "canvas": "^2.11.2",
     "chai": "^5.1.0",
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "download-file": "^0.1.5"
   },
   "devDependencies": {
     "@serenity-js/assertions": "^3.21.0",

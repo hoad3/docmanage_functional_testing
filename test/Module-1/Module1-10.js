@@ -5,8 +5,8 @@ exports.module1_10 = void 0;
 
 const module1_10 = async () =>{
     await browser.setWindowSize(1231, 894)
-    // await browser.url(`${process.env.WEBSITE_URL}/hospital-index-revision-by-year`)
-    // await expect(browser).toHaveUrl(`${process.env.WEBSITE_URL}/hospital-index-revision-by-year`)
+    // await browser.url(`${process.env.LOGIN_URL}/hospital-index-revision-by-year`)
+    // await expect(browser).toHaveUrl(`${process.env.LOGIN_URL}/hospital-index-revision-by-year`)
     // await browser.$("//*[@id=\"root\"]/div[1]/div[1]/div[2]/div[1]/div[3]/button").click()
 
     await  browser.$('.MuiButton-root').click();
@@ -23,7 +23,7 @@ describe('test script Module1-10', () =>{
 
 
 
-//     let LinkPage1 = `${process.env.WEBSITE_URL}/index-hospital`;
+//     let LinkPage1 = `${process.env.LOGIN_URL}/index-hospital`;
 //     let inptustartyear = '[name="yearStart"]';
 //     let inptuendyear = '[name="yearEnd"]';
 //     let OptiomClick = '[type="button"]';
